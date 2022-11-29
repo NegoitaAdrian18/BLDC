@@ -47,3 +47,14 @@ class Stator(object):
         """
         hjs = self.magnetic_flux_per_pole() / (2 * self.k_fe * self.L_fe * self.B_js)
         return hjs
+
+    def bothom_tooth_diameter(self):
+        """
+        Calculul diametrului la nivelul jugului stator
+        :return:
+        """
+        d3 = (self.d_stator_ext - 2 * self.armature_high())/2
+
+        return d3
+
+
