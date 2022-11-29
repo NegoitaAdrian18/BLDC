@@ -2,7 +2,6 @@ import numpy as np
 
 
 class Stator(object):
-
     k_fe = 0.95
     alfa_pol = 0.89
     B_delta_med = 0.65
@@ -18,7 +17,6 @@ class Stator(object):
         self.d_stator_int = float(input("Insert the interior diameter of stator: "))
         self.slot = int(input("Insert numnber of slots: "))
         self.number_of_paire_poles = int(input(" Insert the number of pole paires: "))
-
 
         assert self.d_stator_int >= self.d_stator_ext, f"The interior diameter of stator can not be grater of equal " \
                                                        f"with the exterior diamter of the stator "
@@ -42,7 +40,6 @@ class Stator(object):
         flux_per_pole = self.alfa_pol * self.area_of_pole() * self.B_delta_med
         return flux_per_pole
 
-
     def armature_high(self):
         """
         Calculul inaltimii jugului statorului
@@ -50,5 +47,3 @@ class Stator(object):
         """
         hjs = self.magnetic_flux_per_pole() / (2 * self.k_fe * self.L_fe * self.B_js)
         return hjs
-
-

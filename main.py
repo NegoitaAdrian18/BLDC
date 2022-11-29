@@ -1,8 +1,4 @@
-
-
-
-import air_gap
-from stator import Stator
+from stator_subassembly.stator import Stator
 
 bldc_motor = Stator()
 rez1 = bldc_motor.magnetic_flux_per_pole()
